@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" layout:decorate="template" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"/>
+    <script src="webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
+            align-items: flex-end; /* Aligner le contenu en bas */
+            justify-content: space-between; /* Espace équitablement entre les colonnes */
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+    <div class="row">
+        <!-- Colonne de gauche -->
+        <div class="col-md-4">
+            <h2>À propos de notre boutique</h2>
+            <p>
+                Bienvenue sur notre boutique ! Nous proposons une large gamme de produits de qualité à des prix compétitifs.
+                Parcourez notre sélection pour découvrir nos produits disponibles, leur quantité et leurs prix.
+            </p>
+            <p>
+                Ajoutez vos produits préférés à votre panier pour faciliter vos achats. Notre interface conviviale vous permet de naviguer
+                facilement entre les différents produits.
+            </p>
+        </div>
+        <!-- Colonne vide au milieu -->
+        <div class="col-md-4"></div>
+        <!-- Colonne de droite -->
+        <div class="col-md-4" >
+            <h2>Bienvenue sur notre boutique</h2>
+            <p>
+                Notre boutique en ligne vous offre une expérience d'achat pratique et agréable. Découvrez notre large sélection de produits
+                et trouvez ce que vous recherchez en quelques clics.
+            </p>
+            <p>
+                Explorez nos catégories et profitez d'une expérience visuelle immersive pour découvrir les différents produits disponibles.
+                Notre interface intuitive et nos fonctionnalités de filtrage avancées vous permettent de trouver rapidement ce que vous cherchez.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

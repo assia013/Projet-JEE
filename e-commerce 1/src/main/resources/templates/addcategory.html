@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Add Category</title>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"/>
+    <script src="webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .btn-custom {
+            background-color: #c74576;
+            border-color: #c74576;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #c00060;
+            border-color: #c00060;
+        }
+        .container {
+            margin-top: 120px;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec transparence */
+            border: 1px solid #ccc; /* Bordure grise */
+            border-radius: 10px; /* Coins arrondis */
+            padding: 20px; /* Espacement intérieur */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            max-width: 600px; /* Largeur maximale du cadre */
+            margin: auto; /* Centrer horizontalement */
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="container text-center">
+        <div class="form-container">
+            <form action="/addCategory" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control w-50 mx-auto" id="name" name="name">
+                    <span class="text-danger" th:errors="${category.name}"></span>
+                </div>
+                <button type="submit" class="btn btn-custom form-control w-50 mx-auto" value="Add">Add Category</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
